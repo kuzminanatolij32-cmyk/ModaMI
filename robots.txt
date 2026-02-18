@@ -5,5 +5,4 @@ Disallow: /personal/
 Disallow: /*?*              
 Disallow: /index.php$      
 
-Host: https://modamir.ru    
-Sitemap: https://modamir.ru/sitemap.xml
+
