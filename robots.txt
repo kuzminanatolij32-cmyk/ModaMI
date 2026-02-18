@@ -5,4 +5,5 @@ Disallow: /personal/
 Disallow: /*?*              
 Disallow: /index.php$      
 
-
+Host: https://modaMi   
+Sitemap: https://modaMi/sitemap.xml
