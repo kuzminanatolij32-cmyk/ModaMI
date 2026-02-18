@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Регистрация - ModaMir</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="auth.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Верхняя панель -->
+<header class="top-header">
+  <div class="header-left">
+    <div class="logo" onclick="window.location.href='index.html'">ModaMir</div>
+    <button class="catalog-btn" onclick="window.location.href='catalog.html'">Каталог</button>
+  </div>
+
+  <div class="header-center">
+    <div class="search-box">
+      <input type="text" placeholder="Поиск" />
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+
+  <div class="header-right">
+    <button class="cart-btn" onclick="window.location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="cart-count">0</span>
+    </button>
+    <a href="login.html" class="login-btn">Войти</a>
+  </div>
+</header>
+
+<!-- Меню -->
+<nav class="main-menu">
+  <a href="index.html">Главная</a>
+  <a href="catalog.html">Женщинам</a>
+  <a href="catalog.html">Мужчинам</a>
+  <a href="catalog.html">Бренды</a>
+  <a href="catalog.html">Детям</a>
+  <a href="promotions.html">Акции</a>
+</nav>
+
+<!-- Форма регистрации -->
+<section class="auth-section">
+  <div class="auth-container">
+    <div class="auth-form">
+      <h2>Регистрация</h2>
+      <form class="auth-form-content" id="registerForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">Имя</label>
+            <input type="text" id="firstName" placeholder="Введите ваше имя" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="lastName">Фамилия</label>
+            <input type="text" id="lastName" placeholder="Введите вашу фамилию" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="reg-email">Email</label>
+          <input type="email" id="reg-email" placeholder="Введите ваш email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="reg-password">Пароль</label>
+          <input type="password" id="reg-password" placeholder="Создайте пароль" required>
+          <span class="toggle-password">
+            <i class="fas fa-eye"></i>
+          </span>
+          <div class="password-strength">
+            <div class="strength-bar"></div>
+            <span class="strength-text">Надежность пароля</span>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="confirm-password">Подтвердите пароль</label>
+          <input type="password" id="confirm-password" placeholder="Повторите пароль" required>
+          <span class="toggle-password">
+            <i class="fas fa-eye"></i>
+          </span>
+        </div>
+        
+        <div class="form-options">
+          <label class="checkbox">
+            <input type="checkbox" required>
+            <span class="checkmark"></span>
+            Я соглашаюсь с <a href="#">условиями использования</a> и <a href="#">политикой конфиденциальности</a>
+          </label>
+        </div>
+        
+        <div class="form-options">
+          <label class="checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Подписаться на рассылку новостей и акций
+          </label>
+        </div>
+        
+        <button type="submit" class="auth-btn">Зарегистрироваться</button>
+        
+        <div class="auth-divider">
+          <span>или</span>
+        </div>
+        
+        <button type="button" class="social-btn google-btn">
+          <i class="fab fa-google"></i>
+          Зарегистрироваться через Google
+        </button>
+        
+        <button type="button" class="social-btn facebook-btn">
+          <i class="fab fa-facebook-f"></i>
+          Зарегистрироваться через Facebook
+        </button>
+      </form>
+      
+      <div class="auth-switch">
+        <p>Уже есть аккаунт? <a href="login.html">Войти</a></p>
+      </div>
+    </div>
+    
+    <div class="auth-benefits">
+      <h3>Присоединяйтесь к ModaMir</h3>
+      <ul>
+        <li><i class="fas fa-tag"></i> Скидка 10% на первую покупку</li>
+        <li><i class="fas fa-star"></i> Накопительная система бонусов</li>
+        <li><i class="fas fa-shipping-fast"></i> Бесплатная доставка от 3000₽</li>
+        <li><i class="fas fa-calendar-alt"></i> Персональные предложения в день рождения</li>
+        <li><i class="fas fa-crown"></i> Доступ к эксклюзивным коллекциям</li>
+        <li><i class="fas fa-clock"></i> Быстрый заказ в 1 клик</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Подвал -->
+<footer class="footer">
+  <div class="footer-section">
+    <h3>ModaMir</h3>
+    <p>Следите за стильными новинками каждый день!</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-section">
+    <h3>Навигация</h3>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
+      <li><a href="promotions.html">Акции</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-section">
+    <h3>Информация</h3>
+    <ul>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Доставка и оплата</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Политика конфиденциальности</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-section">
+    <h3>Контакты</h3>
+    <ul>
+      <li><a href="mailto:admin@mir.com">admin@mir.com</a></li>
+      <li><a href="tel:+886786543210">+8 867 865-43-210</a></li>
+      <li><a href="#">Bentley Hills, California, USA</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <p>© 2024 ModaMir — Все права защищены</p>
+</div>
+
+<script src="auth.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>

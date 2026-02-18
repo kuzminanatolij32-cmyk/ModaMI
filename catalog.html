@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Каталог - ModaMir</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="catalog.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+<header class="top-header">
+  <div class="header-left">
+    <div class="logo" onclick="window.location.href='index.html'">ModaMir</div>
+    <button class="catalog-btn active">Каталог</button>
+  </div>
+
+  <div class="header-center">
+    <div class="search-box">
+      <input type="text" placeholder="Поиск товаров..." />
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+
+  <div class="header-right">
+    <button class="cart-btn" onclick="window.location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="cart-count">0</span>
+    </button>
+    <a href="login.html" class="login-btn">Войти</a>
+  </div>
+</header>
+
+
+<nav class="main-menu">
+  <a href="index.html">Главная</a>
+  <a href="catalog.html" class="active">Женщинам</a>
+  <a href="catalog.html">Мужчинам</a>
+  <a href="catalog.html">Бренды</a>
+  <a href="catalog.html">Детям</a>
+  <a href="promotions.html">Акции</a>
+</nav>
+
+
+<section class="catalog-section">
+  <div class="container">
+
+    <div class="breadcrumbs">
+      <a href="index.html">Главная</a>
+      <span>/</span>
+      <span>Каталог</span>
+    </div>
+
+    <div class="catalog-header">
+      <h1>Каталог товаров</h1>
+      <p>Более 1000 стильных образов для вас</p>
+    </div>
+
+    <div class="catalog-layout">
+
+      <aside class="filters-sidebar">
+        <div class="filter-group">
+          <h3>Категории</h3>
+          <div class="filter-options">
+            <label class="checkbox">
+              <input type="checkbox" checked>
+              <span class="checkmark"></span>
+              Супергеройские костюмы
+            </label>
+            <label class="checkbox">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+              Повседневная одежда
+            </label>
+            <label class="checkbox">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+              Аксессуары
+            </label>
+            <label class="checkbox">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+              Обувь
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Цена</h3>
+          <div class="price-range">
+            <div class="range-inputs">
+              <input type="number" placeholder="0" min="0" class="min-price">
+              <span>-</span>
+              <input type="number" placeholder="10000" min="0" class="max-price">
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Размер</h3>
+          <div class="size-options">
+            <button class="size-btn">XS</button>
+            <button class="size-btn active">S</button>
+            <button class="size-btn">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+            <button class="size-btn">XXL</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Бренд</h3>
+          <div class="filter-options">
+            <label class="checkbox">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+              DC Comics
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" checked>
+              <span class="checkmark"></span>
+              Marvel
+            </label>
+            <label class="checkbox">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+              Disney
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-actions">
+          <button class="apply-filters">Применить фильтры</button>
+          <button class="reset-filters">Сбросить</button>
+        </div>
+      </aside>
+
+      <!-- Основной контент -->
+      <main class="catalog-main">
+        <div class="catalog-toolbar">
+          <div class="toolbar-left">
+            <span class="products-count">Найдено 8 товаров</span>
+          </div>
+          <div class="toolbar-right">
+            <select class="sort-select">
+              <option>По популярности</option>
+              <option>По цене (возрастание)</option>
+              <option>По цене (убывание)</option>
+              <option>По новизне</option>
+            </select>
+            <div class="view-options">
+              <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+              <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="products-grid" id="productsView">
+          <!-- Товары -->
+          <div class="product-card">
+            <span class="badge">Новинка</span>
+            <img src="продукт1.jpg" alt="Костюм Чёрный Адам" />
+            <h3>Костюм супергероя "Чёрный Адам"</h3>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(15)</span>
+            </div>
+            <p class="price">6 500 ₽</p>
+            <button class="product-btn add-to-cart" onclick="addToCart(1)">В корзину</button>
+          </div>
+
+          <div class="product-card">
+            <span class="badge sale">-20%</span>
+            <img src="продукт2.jpeg" alt="Костюм Супермен" />
+            <h3>Костюм супергероя "Супермен"</h3>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(28)</span>
+            </div>
+            <p class="price">
+              <span class="old-price">9 000 ₽</span>
+              7 200 ₽
+            </p>
+            <button class="product-btn add-to-cart" onclick="addToCart(2)">В корзину</button>
+          </div>
+
+          <div class="product-card">
+            <img src="продукт6.jpg" alt="Костюм Бэтмен" />
+            <h3>Костюм супергероя "Бэтмен"</h3>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(32)</span>
+            </div>
+            <p class="price">6 800 ₽</p>
+            <button class="product-btn add-to-cart" onclick="addToCart(3)">В корзину</button>
+          </div>
+
+          <div class="product-card">
+            <span class="badge">Хит</span>
+            <img src="продукт3.jpg" alt="Костюм Чудо-женщина" />
+            <h3>Костюм супергероя "Чудо-женщина"</h3>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(24)</span>
+            </div>
+            <p class="price">7 500 ₽</p>
+            <button class="product-btn add-to-cart" onclick="addToCart(4)">В корзину</button>
+          </div>
+
+          <div class="product-card">
+            <img src="продукт5.jpg" alt="Тёмный ангел" />
+            <h3>Костюм для Хэллоуин "Тёмный ангел"</h3>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>(18)</span>
+            </div>
+            <p class="price">6 900 ₽</p>
+            <button class="product-btn add-to-cart" onclick="addToCart(5)">В корзину</button>
+          </div>
+
+          <div class="product-card">
+            <img src="продукт7.jpg" alt="Костюм Монаха в стиле средневекового священника" />
+            <h3>Костюм Монаха</h3>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>(16)</span>
+            </div>
+            <p class="price">7 100 ₽</p>
+            <button class="product-btn add-to-cart" onclick="addToCart(6)">В корзину</button>
+          </div>
+
+          <div class="product-card">
+            <span class="badge">Новинка</span>
+            <img src="продукт8.jpg" alt=Костюм карнавальный Баба Яга" />
+            <h3>Костюм карнавальный "Баба Яга"</h3>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+              <span>(12)</span>
+            </div>
+            <p class="price">7 300 ₽</p>
+            <button class="product-btn add-to-cart" onclick="addToCart(7)">В корзину</button>
+          </div>
+
+          <div class="product-card">
+            <img src="продукт4.jpg" alt="Костюм Халк" />
+            <h3>Костюм супергероя "Халк"</h3>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(21)</span>
+            </div>
+            <p class="price">7 800 ₽</p>
+            <button class="product-btn add-to-cart" onclick="addToCart(8)">В корзину</button>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn next">Далее <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+
+<!-- Подвал -->
+<footer class="footer">
+  <div class="footer-section">
+    <h3>ModaMir</h3>
+    <p>Следите за стильными новинками каждый день!</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-section">
+    <h3>Навигация</h3>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
+      <li><a href="promotions.html">Акции</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-section">
+    <h3>Информация</h3>
+    <ul>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Доставка и оплата</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Политика конфиденциальности</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-section">
+    <h3>Контакты</h3>
+    <ul>
+      <li><a href="mailto:admin@mir.com">admin@mir.com</a></li>
+      <li><a href="tel:+886786543210">+8 867 865-43-210</a></li>
+      <li><a href="#">Bentley Hills, California, USA</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <p>© 2024 ModaMir — Все права защищены</p>
+</div>
+
+<script src="cart.js"></script>
+<script src="catalog.js"></script>
+</body>
+</html>

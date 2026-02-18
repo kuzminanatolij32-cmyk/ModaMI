@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Корзина - ModaMir</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+<header class="top-header">
+  <div class="header-left">
+    <div class="logo" onclick="window.location.href='index.html'">ModaMir</div>
+    <button class="catalog-btn" onclick="window.location.href='catalog.html'">Каталог</button>
+  </div>
+
+  <div class="header-center">
+    <div class="search-box">
+      <input type="text" placeholder="Поиск" />
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+
+  <div class="header-right">
+    <button class="cart-btn active" onclick="window.location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="cart-count">0</span>
+    </button>
+    <a href="login.html" class="login-btn">Войти</a>
+  </div>
+</header>
+
+
+<nav class="main-menu">
+  <a href="index.html">Главная</a>
+  <a href="catalog.html">Женщинам</a>
+  <a href="catalog.html">Мужчинам</a>
+  <a href="catalog.html">Бренды</a>
+  <a href="catalog.html">Детям</a>
+  <a href="promotions.html">Акции</a>
+</nav>
+
+
+<section class="cart-section">
+  <div class="container">
+
+    <div class="breadcrumbs">
+      <a href="index.html">Главная</a>
+      <span>/</span>
+      <a href="catalog.html">Каталог</a>
+      <span>/</span>
+      <span>Корзина</span>
+    </div>
+
+    <div class="cart-header">
+      <h1>Корзина покупок</h1>
+      <p>Проверьте ваш заказ перед оформлением</p>
+    </div>
+
+    <div class="cart-layout">
+
+      <div class="cart-items">
+
+      </div>
+
+
+      <aside class="order-summary">
+        <h3>Ваш заказ</h3>
+        <div class="summary-details">
+          <div class="summary-row">
+            <span>Товары (<span class="items-count">0</span>)</span>
+            <span>0 ₽</span>
+          </div>
+          <div class="summary-row">
+            <span>Скидка</span>
+            <span class="discount">-0 ₽</span>
+          </div>
+          <div class="summary-row">
+            <span>Доставка</span>
+            <span class="shipping">Бесплатно</span>
+          </div>
+          <div class="summary-divider"></div>
+          <div class="summary-row total">
+            <span>Итого</span>
+            <span>0 ₽</span>
+          </div>
+        </div>
+
+        <div class="shipping-methods">
+          <h4>Способ доставки</h4>
+          <label class="radio">
+            <input type="radio" name="shipping" checked>
+            <span class="radiomark"></span>
+            Курьерская доставка
+          </label>
+          <label class="radio">
+            <input type="radio" name="shipping">
+            <span class="radiomark"></span>
+            Самовывоз
+          </label>
+        </div>
+
+        <button class="checkout-btn" onclick="checkout()">Перейти к оформлению</button>
+        
+        <div class="secure-payment">
+          <p><i class="fas fa-shield-alt"></i> Безопасная оплата</p>
+          <div class="payment-methods">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-mir"></i>
+            <i class="fab fa-cc-paypal"></i>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="recommended-section">
+      <h2>Рекомендуем также</h2>
+      <div class="recommended-products">
+        <div class="product-card small">
+          <img src="продукт1.jpg" alt="Костюм Бэтмен" />
+          <h3>Костюм супергероя "Бэтмен"</h3>
+          <p class="price">6 800 ₽</p>
+          <button class="product-btn" onclick="addToCart(3)">В корзину</button>
+        </div>
+        <div class="product-card small">
+          <img src="продукт3.jpg" alt="Костюм Чудо-женщина" />
+          <h3>Костюм супергероя "Чудо-женщина"</h3>
+          <p class="price">7 500 ₽</p>
+          <button class="product-btn" onclick="addToCart(4)">В корзину</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="cart.js"></script>
+</body>
+</html>

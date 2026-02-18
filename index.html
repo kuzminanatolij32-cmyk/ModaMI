@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ModaMir</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-left">
+    <div class="logo">ModaMir</div>
+    <button class="catalog-btn" onclick="window.location.href='catalog.html'">Каталог</button>
+  </div>
+
+  <div class="header-center">
+    <div class="search-box">
+      <input type="text" placeholder="Поиск" />
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+
+  <div class="header-right">
+    <button class="cart-btn" onclick="window.location.href='cart.html'">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="cart-count">0</span>
+    </button>
+    <a href="login.html" class="login-btn">Войти</a>
+  </div>
+</header>
+
+<nav class="main-menu">
+  <a href="index.html" class="active">Главная</a>
+  <a href="catalog.html">Женщинам</a>
+  <a href="catalog.html">Мужчинам</a>
+  <a href="catalog.html">Бренды</a>
+  <a href="catalog.html">Детям</a>
+  <a href="promotions.html">Акции</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>Добро пожаловать в <strong>ModaMir</strong></h1>
+    <button class="hero-button" onclick="window.location.href='catalog.html'">Подробнее</button>
+    <div class="slider-dots">
+      <span class="dot"></span>
+      <span class="dot active"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
+
+<!-- Коллекция -->
+<section class="collection">
+  <h2>Наша коллекция</h2>
+  <p>Уникальные стили для вашей индивидуальности</p>
+  <div class="products">
+    <!-- Верхний ряд (4 карточки) -->
+    <div class="product-card">
+      <img src="продукт1.jpg" alt="Костюм Чёрный Адам" />
+      <h3>Костюм супергероя "Чёрный Адам"</h3>
+      <p class="price">6 500 ₽</p>
+      <button class="product-btn" onclick="addToCart(1)">В корзину</button>
+    </div>
+    <div class="product-card">
+      <img src="продукт2.jpeg" alt="Костюм Супермен" />
+      <h3>Костюм супергероя "Супермен"</h3>
+      <p class="price">7 200 ₽</p>
+      <button class="product-btn" onclick="addToCart(2)">В корзину</button>
+    </div>
+    <div class="product-card">
+      <img src="продукт6.jpg" alt="Костюм Бэтмен" />
+      <h3>Костюм супергероя  "Бэтмен"</h3>
+      <p class="price">6 800 ₽</p>
+      <button class="product-btn" onclick="addToCart(3)">В корзину</button>
+    </div>
+    <div class="product-card">
+      <img src="продукт3.jpg" alt="Костюм Чудо-женщина" />
+      <h3>Костюм супергероя "Чудо-женщина"</h3>
+      <p class="price">7 500 ₽</p>
+      <button class="product-btn" onclick="addToCart(4)">В корзину</button>
+    </div>
+
+    <!-- Нижний ряд (4 карточки) -->
+    <div class="product-card">
+      <img src="продукт5.jpg" alt="Тёмный ангел" />
+      <h3>Костюм для Хэллоуин "Тёмный ангел"</h3>
+      <p class="price">6 900 ₽</p>
+      <button class="product-btn" onclick="addToCart(5)">В корзину</button>
+    </div>
+    <div class="product-card">
+      <img src="продукт7.jpg" alt="Костюм Монаха в стиле средневекового священника" />
+      <h3>Костюм Монаха в стиле средневекового священника</h3>
+      <p class="price">7 100 ₽</p>
+      <button class="product-btn" onclick="addToCart(6)">В корзину</button>
+    </div>
+    <div class="product-card">
+      <img src="продукт8.jpg" alt="Костюм карнавальный Баба Яга" />
+      <h3>Костюм карнавальный "Баба Яга""</h3>
+      <p class="price">7 300 ₽</p>
+      <button class="product-btn" onclick="addToCart(7)">В корзину</button>
+    </div>
+    <div class="product-card">
+      <img src="продукт4.jpg" alt="Костюм Халк" />
+      <h3>Костюм супергероя   "Халк"</h3>
+      <p class="price">7 800 ₽</p>
+      <button class="product-btn" onclick="addToCart(8)">В корзину</button>
+    </div>
+  </div>
+</section>
+
+<!-- Приложение -->
+<section class="header-app">
+  <div class="container">
+    <h2>Скачай приложение ModaMir</h2>
+    <p>Будь в курсе событий и новинок первым</p>
+    <div class="download-links">
+      <a href="#" class="google-play">Google Play</a>
+      <a href="#" class="app-store">App Store</a>
+    </div>
+  </div>
+</section>
+
+<!-- Соцсети -->
+<section class="social-networks">
+  <h2>Мы в социальных сетях</h2>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+</section>
+
+<!-- Подвал -->
+<footer class="footer">
+  <div class="footer-section">
+    <h3>ModaMir</h3>
+    <p>Следите за стильными новинками каждый день!</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-section">
+    <h3>Навигация</h3>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
+      <li><a href="promotions.html">Акции</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-section">
+    <h3>Информация</h3>
+    <ul>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Доставка и оплата</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Политика конфиденциальности</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-section">
+    <h3>Контакты</h3>
+    <ul>
+      <li><a href="mailto:admin@mir.com">admin@mir.com</a></li>
+      <li><a href="tel:+886786543210">+8 867 865-43-210</a></li>
+      <li><a href="#">Bentley Hills, California, USA</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <p>© 2024 ModaMir — Все права защищены</p>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

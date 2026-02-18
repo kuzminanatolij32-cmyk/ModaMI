@@ -1,0 +1,330 @@
+/* СТИЛИ ДЛЯ СТРАНИЦЫ АКЦИЙ */
+.promotions-hero {
+  position: relative;
+  background: linear-gradient(135deg, #ff6b6b, #ffa726);
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.promotions-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="gift" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="8" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23gift)"/></svg>');
+}
+
+.promotions-overlay {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.promotions-overlay h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.promotions-overlay p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.promotions-section {
+  padding: 60px 20px;
+  background: #f8f8f8;
+}
+
+.promotions-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.promotions-header h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #ff6b6b, #ffa726);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.promotions-header p {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.promotions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.promotion-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.promotion-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.promotion-card.large {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.promotion-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #ff6b6b, #ffa726);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.promotion-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.promotion-card.large .promotion-image {
+  height: 100%;
+}
+
+.promotion-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.promotion-card.large .promotion-image img {
+  height: 100%;
+}
+
+.promotion-card:hover .promotion-image img {
+  transform: scale(1.05);
+}
+
+.promotion-content {
+  padding: 25px;
+}
+
+.promotion-card.large .promotion-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.promotion-content h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.promotion-content p {
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.promotion-meta {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.promotion-date,
+.promotion-time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #888;
+  font-size: 14px;
+}
+
+.promotion-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ffa726);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.promotion-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+.discounted-products {
+  margin-bottom: 80px;
+}
+
+.discounted-products h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.discounted-products > p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.newsletter-section {
+  background: linear-gradient(135deg, #8b6e99, #dca8c9);
+  padding: 60px 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+
+.newsletter-content h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.newsletter-content > p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+}
+
+.newsletter-btn {
+  background: white;
+  color: #8b6e99;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background: #f8f8f8;
+  transform: translateY(-2px);
+}
+
+.newsletter-note {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Анимации */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.promotion-badge {
+  animation: pulse 2s infinite;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .promotion-card.large {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .promotions-hero {
+    height: 50vh;
+  }
+  
+  .promotions-overlay h1 {
+    font-size: 36px;
+  }
+  
+  .promotions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .promotions-grid {
+    gap: 20px;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-section {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promotions-overlay h1 {
+    font-size: 28px;
+  }
+  
+  .promotions-overlay p {
+    font-size: 16px;
+  }
+  
+  .promotion-content {
+    padding: 20px;
+  }
+  
+  .promotion-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
