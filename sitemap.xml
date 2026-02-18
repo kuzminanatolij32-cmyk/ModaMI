@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://modaMi/</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://modaMi/catalog.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <!-- Страница акций -->
+  <url>
+    <loc>https://modaMi/promotions.html</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <!-- Страница входа -->
+  <url>
+    <loc>https://modaMi/login.html</loc>
+    <priority>0.3</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <!-- Страница корзины -->
+  <url>
+    <loc>https://modaMi/cart.html</loc>
+    <priority>0.3</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <!-- Другие страницы из футера (пример) -->
+  <url>
+    <loc>https://modaMi/#about</loc> 
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+   <url>
+    <loc>https://modaMi/#delivery</loc> 
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+</urlset>
